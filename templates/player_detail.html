@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Detail</title>
+</head>
+<body>
+<h1>Anime Details</h1>
+    {% if player %}
+        <h2>{{ player['short_name'] }}
+            {{player['player_positions']}}
+            {{ player['overall'] }} Rated
+        </h2>
+        <p>Team: {{player['club_name']}}</p>
+    {% else %}
+        <p>Anime not found</p>
+    {% endif %}
+    <a href="{{ url_for('index') }}">Back to Rankings</a>
+
+</body>
+</html>

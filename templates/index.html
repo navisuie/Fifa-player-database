@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player rankings</title>
+</head>
+<body>
+    <h1>Player Rankings</h1>
+        <ul>
+            {% for player in player_data %}
+            <li><a href="{{ url_for('player_detail', short_name =player['short_name']) }}">{{ player['short_name'] }}</a> - Position: {{player['player_positions']}} - Rating: {{ player['overall'] }}</li>
+            {% endfor %}
+         </ul>
+
+</body>
+</html>
