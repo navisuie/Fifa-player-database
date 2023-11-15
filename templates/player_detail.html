@@ -6,7 +6,7 @@
     <title>Player Detail</title>
 </head>
 <body>
-<h1>Anime Details</h1>
+<h1>Player Details</h1>
     {% if player %}
         <h2>{{ player['short_name'] }}
             {{player['player_positions']}}
@@ -14,7 +14,7 @@
         </h2>
         <p>Team: {{player['club_name']}}</p>
     {% else %}
-        <p>Anime not found</p>
+        <p>Player not found</p>
     {% endif %}
     <a href="{{ url_for('index') }}">Back to Rankings</a>
 
